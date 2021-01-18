@@ -10,7 +10,7 @@ export const Filter = ({ value, onChangeFilter }) => {
 
         <FilterWrapper className="wrapper">
             <h3 className="titleFilter">Find contacts by name</h3>
-            <input name="filter" type="text" className="input" value={value} onChange={onChangeFilter}></input>
+            <input name="filter" type="text" className="input" placeholder="Search..." value={value} onChange={onChangeFilter}></input>
         </FilterWrapper>
     )
 }
