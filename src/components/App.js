@@ -79,11 +79,9 @@ const App = () => {
 
     const deleteContact = (e) => {
         const contactId = e.target.dataset.id
-        setState(prevState => {
-            return {
-                contacts: prevState.contacts.filter(({ id }) => id !== contactId)
-            }
-        })
+        setState(prevState =>
+            ({ ...prevState, contacts: prevState.contacts.filter(({ id }) => id !== contactId) })
+        )
     }
     return (
         <PhonebookWrapper>
