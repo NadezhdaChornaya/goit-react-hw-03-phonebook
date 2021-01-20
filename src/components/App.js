@@ -35,7 +35,7 @@ const App = () => {
     }, [])
 
     const handleChangeFilter = (e) => {
-        setState({ filter: e.target.value });
+        setState(prevState => ({ ...prevState, filter: e.target.value }));
     }
 
     const getVisibleContacts = () => {
